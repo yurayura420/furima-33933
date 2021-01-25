@@ -77,7 +77,7 @@ Things you may want to cover:
 
 |Column      |Type      |Options                      |
 |--------------|----------|-----------------------------|
-|address_nuber |integer   |null:false                   |
+|address_number|string    |null:false                   |
 |area_id       |integer   |null:false                   |
 |city          |string    |null:false                   |
 |house_number  |string    |null:false                   |
