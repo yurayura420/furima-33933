@@ -47,10 +47,11 @@ Things you may want to cover:
 |----------------|----------|-----------------------------|
 |name            |string    |null:false                   |
 |description     |text      |null:false                   |
-|status          |integer   |null:false                   |
-|shippingfee     |integer   |null:false                   | 
-|area            |integer   |null:false                   |
-|shippingdate    |integer   |null:false                   |
+|state_id       |integer   |null:false                   |
+|shippingfee_id  |integer   |null:false                   | 
+|area_id         |integer   |null:false                   |
+|shippingdate_id |integer   |null:false                   |
+|category_id     |integer   |null:false                   |
 |price           |integer   |null:false (300~9999999)     |
 |user(producer)  |references|null:false, foreign_key: true|
 
@@ -70,18 +71,19 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :item
-- has_one :addresses
+- has_one :address
 
 ## addresses
 
-|Column     |Type      |Options                      |
-|-----------|----------|-----------------------------|
-|area       |string    |null:false                   |
-|city       |string    |null:false                   |
-|housenumber|string    |null:false                   |
-|housename  |string    |null:false                   |
-|phonenumber|string    |null:false                   |
-|buyrecords |references|null:false, foreign_key: true|
+|Column      |Type      |Options                      |
+|------------|----------|-----------------------------|
+|addressnuber|integer   |null:false                   |
+|area_id     |integer   |null:false                   |
+|city        |string    |null:false                   |
+|housenumber |string    |null:false                   |
+|housename   |string    |                             |
+|phonenumber |string    |null:false                   |
+|buyrecords  |references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :buyrecord
