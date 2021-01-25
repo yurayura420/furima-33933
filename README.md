@@ -25,13 +25,16 @@ Things you may want to cover:
 
 ## users
 
-|Column    |Type  |Options                     |
-|----------|------|----------------------------|
-|nickname  |string|null:false                  |
-|email     |string|null:false unique: true     |
-|password  |string|null:false(半角英数混合)      |
-|firstname |string|null:false(漢字カタカナ平仮名) |
-|birth-date|string|null:false                  |
+|Column            |Type  |Options                |
+|------------------|------|-----------------------|
+|nickname          |string|null:false             |
+|email             |string|null:false unique: true|
+|encrypted_password|string|null:false             |
+|firstname         |string|null:false             |
+|lastname          |string|null:false             |
+|firstname_read    |string|null:false             |
+|lastname_read     |string|null:false             | 
+|birth_date        |date  |null:false             |
 
 ### Association
 - has_many :items
@@ -44,10 +47,10 @@ Things you may want to cover:
 |----------------|----------|-----------------------------|
 |name            |string    |null:false                   |
 |description     |text      |null:false                   |
-|status          |string    |null:false                   |
+|status          |integer   |null:false                   |
 |shippingfee     |integer   |null:false                   | 
-|area            |string    |null:false                   |
-|shippingdate    |string    |null:false                   |
+|area            |integer   |null:false                   |
+|shippingdate    |integer   |null:false                   |
 |price           |integer   |null:false (300~9999999)     |
 |user(producer)  |references|null:false, foreign_key: true|
 
@@ -60,7 +63,6 @@ Things you may want to cover:
 
 |Column         |Type      |Options                      |
 |---------------|----------|-----------------------------|
-|name           |string    |null:false                   |
 |user(purchaser)|references|null:false, foreign_key: true|
 |items          |references|null:false, foreign_key: true|
 
@@ -68,14 +70,16 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :item
+- has_one :addresses
 
 ## addresses
 
 |Column     |Type      |Options                      |
 |-----------|----------|-----------------------------|
-|prefecture |string    |null:false                   |
+|area       |string    |null:false                   |
 |city       |string    |null:false                   |
 |housenumber|string    |null:false                   |
+|housename  |string    |null:false                   |
 |phonenumber|string    |null:false                   |
 |buyrecords |references|null:false, foreign_key: true|
 
