@@ -25,42 +25,42 @@ Things you may want to cover:
 
 ## users
 
-|Column            |Type  |Options                |
-|------------------|------|-----------------------|
-|nickname          |string|null:false             |
-|email             |string|null:false unique: true|
-|encrypted_password|string|null:false             |
-|firstname         |string|null:false             |
-|lastname          |string|null:false             |
-|firstname_read    |string|null:false             |
-|lastname_read     |string|null:false             | 
-|birth_date        |date  |null:false             |
+|Column             |Type  |Options                |
+|-------------------|------|-----------------------|
+|nickname           |string|null:false             |
+|email              |string|null:false unique: true|
+|encrypted_password |string|null:false             |
+|first_name         |string|null:false             |
+|last_name          |string|null:false             |
+|first_name_read    |string|null:false             |
+|last_name_read     |string|null:false             | 
+|birth_date         |date  |null:false             |
 
 ### Association
 - has_many :items
-- has_many :buyrecords
+- has_many :buy_records
 
 
 ## items
 
-|Column          |Type      |Options                      |
-|----------------|----------|-----------------------------|
-|name            |string    |null:false                   |
-|description     |text      |null:false                   |
-|state_id       |integer   |null:false                   |
-|shippingfee_id  |integer   |null:false                   | 
-|area_id         |integer   |null:false                   |
-|shippingdate_id |integer   |null:false                   |
-|category_id     |integer   |null:false                   |
-|price           |integer   |null:false (300~9999999)     |
-|user(producer)  |references|null:false, foreign_key: true|
+|Column           |Type      |Options                      |
+|-----------------|----------|-----------------------------|
+|name             |string    |null:false                   |
+|description      |text      |null:false                   |
+|state_id         |integer   |null:false                   |
+|shipping_fee_id  |integer   |null:false                   | 
+|area_id          |integer   |null:false                   |
+|shipping_date_id |integer   |null:false                   |
+|category_id      |integer   |null:false                   |
+|price            |integer   |null:false (300~9999999)     |
+|user(producer)   |references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :user
-- has_one :buyrecord
+- has_one :buy_record
 
 
-## buyrecords
+## buy_records
 
 |Column         |Type      |Options                      |
 |---------------|----------|-----------------------------|
@@ -76,15 +76,15 @@ Things you may want to cover:
 ## addresses
 
 |Column      |Type      |Options                      |
-|------------|----------|-----------------------------|
-|addressnuber|integer   |null:false                   |
-|area_id     |integer   |null:false                   |
-|city        |string    |null:false                   |
-|housenumber |string    |null:false                   |
-|housename   |string    |                             |
-|phonenumber |string    |null:false                   |
-|buyrecord   |references|null:false, foreign_key: true|
+|--------------|----------|-----------------------------|
+|address_nuber |integer   |null:false                   |
+|area_id       |integer   |null:false                   |
+|city          |string    |null:false                   |
+|house_number  |string    |null:false                   |
+|house_name    |string    |                             |
+|phone_number  |string    |null:false                   |
+|buy_record    |references|null:false, foreign_key: true|
 
 ### Association
-- belongs_to :buyrecord
+- belongs_to :buy_record
 

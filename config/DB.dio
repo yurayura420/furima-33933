@@ -1,17 +1,17 @@
-<mxfile host="65bd71144e" modified="2021-01-25T06:55:30.179Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="Nckscd24wattqF2_kHI2" type="embed">
+<mxfile host="65bd71144e" modified="2021-01-25T08:24:56.938Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="YqEehUk8yKi-ePOMIQAQ" type="embed">
     <diagram id="nIbfjJv284KnpydSRjjw" name="ページ1">
-        <mxGraphModel dx="1757" dy="971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1485" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry y="5" width="310" height="170" as="geometry"/>
+                    <mxGeometry y="5" width="330" height="225" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="users" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
                     <mxGeometry x="50" y="10" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="&lt;ul&gt;&lt;li&gt;nickname&amp;nbsp; &amp;nbsp;string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;email&amp;nbsp; string&amp;nbsp; nul:false unique: true&lt;/li&gt;&lt;li&gt;password string&amp;nbsp; null:false(半角英数混合)&lt;/li&gt;&lt;li&gt;firstname string&amp;nbsp; null:false(漢字カタカナ平仮名)&lt;/li&gt;&lt;li&gt;birth-date string&amp;nbsp; null:false&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="-2.5" y="40" width="312.5" height="100" as="geometry"/>
+                <mxCell id="4" value="&lt;ul&gt;&lt;li&gt;nickname&amp;nbsp; &amp;nbsp;string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;email&amp;nbsp; string&amp;nbsp; nul:false unique: true&lt;/li&gt;&lt;li&gt;encrypted_password string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;first_name string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;last_name string null:false&lt;/li&gt;&lt;li&gt;first_name_read string null:false&lt;/li&gt;&lt;li&gt;last_name_read string null:false&lt;/li&gt;&lt;li&gt;birth_date date&amp;nbsp; null:false&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+                    <mxGeometry x="-2.5" y="40" width="332.5" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="470" y="10" width="370" height="270" as="geometry"/>
@@ -19,26 +19,26 @@
                 <mxCell id="8" value="items" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
                     <mxGeometry x="540" y="20" width="100" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="&lt;ul&gt;&lt;li&gt;name&amp;nbsp; string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;image (Active Storage)&lt;/li&gt;&lt;li&gt;description text&amp;nbsp; null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;status string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;shippingfee integer null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;area string&amp;nbsp; text&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;shippingdate string null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;price integer&amp;nbsp; null:false (300~9999999)&lt;/li&gt;&lt;li&gt;userid(producer)&amp;nbsp; foreign_key: true&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="40" width="270" height="210" as="geometry"/>
+                <mxCell id="9" value="&lt;ul&gt;&lt;li&gt;name&amp;nbsp; string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;image (Active Storage)&lt;/li&gt;&lt;li&gt;description text&amp;nbsp; null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;status_id integer&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;shipping_fee_id integer null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;area_id integer&amp;nbsp; &amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;shipping_date_id integer null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;category_id integer null:false&lt;/li&gt;&lt;li&gt;price integer&amp;nbsp; null:false (300~9999999)&lt;/li&gt;&lt;li&gt;user(producer)&amp;nbsp; references foreign_key: true&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="40" width="300" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="52" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="70" y="360" width="270" height="120" as="geometry"/>
+                    <mxGeometry x="70" y="360" width="370" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="buyrecord" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                <mxCell id="53" value="buy_record" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
                     <mxGeometry x="105" y="360" width="135" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="&lt;ul&gt;&lt;li&gt;name string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;userid(purchaser)&amp;nbsp; foreign_key: true&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="80" y="400" width="250" height="80" as="geometry"/>
+                <mxCell id="54" value="&lt;ul&gt;&lt;li&gt;item references&amp;nbsp; null:false foreign_key:true&lt;/li&gt;&lt;li&gt;user(purchaser) referemces null:false&amp;nbsp; foreign_key: true&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="390" width="350" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="94" y="600" width="246" height="150" as="geometry"/>
+                    <mxGeometry x="97" y="590" width="353" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="60" value="addresses" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="140" y="600" width="100" height="40" as="geometry"/>
+                    <mxGeometry x="140" y="580" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="&lt;ul&gt;&lt;li&gt;prefecture&amp;nbsp; string&amp;nbsp; null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;city string null:false&lt;/li&gt;&lt;li&gt;housenumber string&amp;nbsp; null:false&amp;nbsp;&lt;/li&gt;&lt;li&gt;phonenumber string&amp;nbsp; null:false&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="110" y="640" width="210" height="100" as="geometry"/>
+                <mxCell id="61" value="&lt;ul&gt;&lt;li&gt;area_id&amp;nbsp; integer&amp;nbsp; null:false&lt;br&gt;&lt;/li&gt;&lt;li&gt;city string null:false&lt;/li&gt;&lt;li&gt;house_number string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;house_name string&lt;/li&gt;&lt;li&gt;address_number string null:false&lt;/li&gt;&lt;li&gt;phone_number string&amp;nbsp; null:false&lt;/li&gt;&lt;li&gt;buy_record&amp;nbsp; references null:false&amp;nbsp; foreign_key: true&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="620" width="320" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="65" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.008;entryY=0.848;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="52" target="7">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -54,7 +54,7 @@
                 </mxCell>
                 <mxCell id="67" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="7">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="310" y="40" as="sourcePoint"/>
+                        <mxPoint x="330" y="40" as="sourcePoint"/>
                         <mxPoint x="410" y="-60" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
