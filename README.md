@@ -38,7 +38,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_many :buy_records
+- has_many :orders
 
 
 ## items
@@ -57,10 +57,10 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :buy_record
+- has_one :order
 
 
-## buy_records
+## orders
 
 |Column         |Type      |Options                      |
 |---------------|----------|-----------------------------|
@@ -86,5 +86,5 @@ Things you may want to cover:
 |buy_record    |references|null:false, foreign_key: true|
 
 ### Association
-- belongs_to :buy_record
+- belongs_to :order
 
