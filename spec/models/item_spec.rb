@@ -21,6 +21,11 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include "Description can't be blank"
       end
+      it "imageが空では投稿できない" do
+        @item.image = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Image can't be blank"
+      end
       it "category_idが１だと登録できない" do
         @item.category_id = 1
         @item.valid?
@@ -51,8 +56,18 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include "Price can't be blank"
       end 
-      it "priceが数字以外だと登録できない" do
+      it "priceが半角英語のみだと登録できない" do
         @item.price = "a"
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Price is not a number"
+      end     
+      it "priceが半角英数混合だと登録できない" do
+        @item.price = "a1"
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Price is not a number"
+      end     
+      it "priceが全角文字だと登録できない" do
+        @item.price = "あ"
         @item.valid?
         expect(@item.errors.full_messages).to include "Price is not a number"
       end     
