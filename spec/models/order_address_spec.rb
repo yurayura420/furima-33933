@@ -2,7 +2,11 @@ require 'rails_helper'
 
 RSpec.describe OrderAddress, type: :model do
   before do
-    @order_address = FactoryBot.build(:order_address)
+    # binding.pry
+    user = FactoryBot.create(:user)
+    item = FactoryBot.create(:item, user_id: user.id)
+    @order_address = FactoryBot.build(:order_address, user_id: user.id, item_id:item.id)
+    sleep 0.1 
   end
   describe 'ユーザー新規登録' do
     context '正常系' do
@@ -15,10 +19,6 @@ RSpec.describe OrderAddress, type: :model do
       end
       it 'phone_numberが10桁なら登録できる' do
         @order_address.phone_number = '0000000000'
-        expect(@order_address).to be_valid
-      end
-      it 'phone_numberが11桁なら登録できる' do
-        @order_address.phone_number = '00000000000'
         expect(@order_address).to be_valid
       end
     end
@@ -60,6 +60,11 @@ RSpec.describe OrderAddress, type: :model do
       end
       it 'phone_numberが12桁以上では登録できない' do
         @order_address.phone_number = '000000000000'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Phone number is invalid')
+      end
+      it 'phone_numberが全角数字では登録できない(11桁)' do
+        @order_address.phone_number = '０００００００００００'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Phone number is invalid')
       end

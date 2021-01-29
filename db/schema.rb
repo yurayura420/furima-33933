@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_025339) do
     t.string "city", null: false
     t.string "house_number", null: false
     t.string "house_name"
-    t.string "phone_number"
+    t.string "phone_number", null: false
     t.bigint "order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
