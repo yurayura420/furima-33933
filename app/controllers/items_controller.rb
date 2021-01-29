@@ -43,8 +43,9 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
     end  
     def move_to_index
-      unless @item.user.id == current_user.id
+      if @item.user.id != current_user.id || Order.find(@item.id) != nil
         redirect_to action: :index
       end
     end
+    
 end
