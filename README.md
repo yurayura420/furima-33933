@@ -83,7 +83,7 @@ Things you may want to cover:
 |house_number  |string    |null:false                   |
 |house_name    |string    |                             |
 |phone_number  |string    |null:false                   |
-|buy_record    |references|null:false, foreign_key: true|
+｜order    |references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :order

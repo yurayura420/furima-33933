@@ -14,6 +14,7 @@ class User < ApplicationRecord
     validates_format_of :first_name_read, presence: true, with: NAME_READ_REGEX
     validates_format_of :last_name_read, presence: true, with: NAME_READ_REGEX
     validates :birth_date, presence: true
-  end  
+  end
   has_many :items
+  has_many :orders
 end
